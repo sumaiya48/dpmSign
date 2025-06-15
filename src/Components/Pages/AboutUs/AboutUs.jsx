@@ -1,5 +1,9 @@
 import React from 'react'
 import HeroBanner from '../../SharedComponents/HeroBanner'
+import OurJourney from './OurJourney'
+import OurExpertise from './OurExpertise'
+import MeetOurManagementTeam from './MeetOurManagementTeam'
+import OurSatisfiedClients from '../Home/OurSatisfiedClients'
 
 export default function AboutUs() {
   return (
@@ -15,7 +19,10 @@ export default function AboutUs() {
       buttonLink="/ourproducts"
     />
     
-          contsct
+          <OurJourney></OurJourney>
+          <OurExpertise></OurExpertise>
+          <OurSatisfiedClients></OurSatisfiedClients>
+          <MeetOurManagementTeam></MeetOurManagementTeam>
         </div>
   )
 }

@@ -7,7 +7,7 @@ export default function WhyChooseUs() {
       {/* Header */}
       <div className="text-center mb-8">
         <h2 className="text-3xl sm:text-4xl font-bold">
-          Our Satisfied Clients
+          Why Choose Us
         </h2>
         <p className=" sm:text-lg text-gray-600 font-semibold mt-2">
           At Dhaka Plastic & Metal, we combine technology, creativity, and passion to deliver exceptional <br /> results. Here's why our clients trust us.

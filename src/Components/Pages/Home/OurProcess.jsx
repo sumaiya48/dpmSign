@@ -42,9 +42,9 @@ const steps = [
 
 export default function OurProcess() {
   return (
-    <div className="py-10 w-11/12 mx-auto bg-base-100">
+    <div className="py-20 w-11/12 mx-auto bg-base-100">
       {/* Heading */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-10 lg:mb-20">
         <h2 className="text-3xl sm:text-4xl font-bold">Our Process</h2>
         <p className="text-base sm:text-lg text-gray-600 mt-2">
           Turning Your Ideas into Reality—Simple, Seamless, and Stress-Free.

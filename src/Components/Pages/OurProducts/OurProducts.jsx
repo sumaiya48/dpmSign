@@ -5,8 +5,7 @@ export default function OurProducts() {
   return (
     <div>
           <HeroBanner
-      title="About Dhaka Plastic & Metal"
-      description="Crafting Excellence in Signage, Awards, and Corporate Gifts."
+      title="Our Products"
       path={[
         { label: "Home", link: "/" },
         { label: "About" }
