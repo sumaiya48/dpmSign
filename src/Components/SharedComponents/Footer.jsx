@@ -23,7 +23,7 @@ export default function Footer() {
                     <h3 className="font-bold mb-3">Need Help</h3>
                     <ul className="space-y-2 text-sm">
                         <Link to='/contact'><li>Contact Us</li></Link>
-                        <li>FAQs</li>
+                        <Link to='/faq'><li>FAQs</li></Link>
                         <Link to='/terms'><li>Terms & Conditions</li></Link>
                     </ul>
                 </div>

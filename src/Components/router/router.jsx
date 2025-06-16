@@ -34,6 +34,7 @@ import ReturnPolicy from "../Pages/Policy/ReturnPolicy";
 import ExchangePolicy from "../Pages/Policy/ExchangePolicy";
 import PrivacyPolicy from "../Pages/Policy/PrivacyPolicy";
 import Terms from "../Pages/Policy/Terms";
+import AccordionItem from "../Pages/Policy/AccordionItem";
 import ProductDetails from "../SharedComponents/ProductDetails.jsx";
 import AccountPage from "../Pages/AccountPage/AccountPage.jsx";
 
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path:'/account',
         element:<AccountPage></AccountPage>
+      },
+      {
+        path:'/faq',
+        element:<AccordionItem></AccordionItem>
       }
     ]
   },
@@ -124,7 +129,6 @@ const router = createBrowserRouter([
       { path: "inquiries", element: <Inqueries></Inqueries> },
       { path: "jobs", element: <Jobs></Jobs> },
       { path: "blogs", element: <Blog></Blog> },
-      { path: "faq", element: <FAQ></FAQ>},
     ]
   }
 ]);
