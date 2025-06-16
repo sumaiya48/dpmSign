@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import payment from '/assets/payment.png'
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -9,9 +10,11 @@ export default function Footer() {
                 <div>
                     <h3 className="font-bold mb-3">All Policy</h3>
                     <ul className="space-y-2 text-sm">
-                        <li>Return Policy</li>
-                        <li>Exchange Policy</li>
-                        <li>Privacy Policy</li>
+                        <Link to='/returnpolicy'><li>Return Policy</li></Link>
+                        <Link to='/exchangepolicy'><li>Exchange Policy</li></Link>
+                        <Link to='/privacypolicy'><li>Privacy Policy</li></Link>
+                        
+                        
                     </ul>
                 </div>
 
@@ -19,9 +22,9 @@ export default function Footer() {
                 <div>
                     <h3 className="font-bold mb-3">Need Help</h3>
                     <ul className="space-y-2 text-sm">
-                        <li>Contact Us</li>
+                        <Link to='/contact'><li>Contact Us</li></Link>
                         <li>FAQs</li>
-                        <li>Terms & Conditions</li>
+                        <Link to='/terms'><li>Terms & Conditions</li></Link>
                     </ul>
                 </div>
 

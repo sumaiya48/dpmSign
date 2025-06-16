@@ -30,6 +30,12 @@ import ProductList from "../AdminPanel/Products/ProductList";
 import Categories from "../AdminPanel/Products/Categories";
 import AddProduct from "../AdminPanel/Products/AddProduct";
 import ProductReview from "../AdminPanel/Products/ProductReview";
+import ReturnPolicy from "../Pages/Policy/ReturnPolicy";
+import ExchangePolicy from "../Pages/Policy/ExchangePolicy";
+import PrivacyPolicy from "../Pages/Policy/PrivacyPolicy";
+import Terms from "../Pages/Policy/Terms";
+import ProductDetails from "../SharedComponents/ProductDetails.jsx";
+import AccountPage from "../Pages/AccountPage/AccountPage.jsx";
 
 // Admin Panel Pages
 
@@ -48,6 +54,10 @@ const router = createBrowserRouter([
         element: <OurProducts></OurProducts>
       },
       {
+        path:'/products/:productId',
+        element:<ProductDetails></ProductDetails>
+      },
+      {
         path: '/services',
         element: <OurServices></OurServices>
       },
@@ -62,6 +72,26 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>
+      },
+      {
+        path:'/returnpolicy',
+        element:<ReturnPolicy></ReturnPolicy>
+      },
+      {
+        path:'/exchangepolicy',
+        element:<ExchangePolicy></ExchangePolicy>
+      },
+      {
+        path:'/privacypolicy',
+        element:<PrivacyPolicy></PrivacyPolicy>
+      },
+      {
+        path:'/terms',
+        element:<Terms></Terms>
+      },
+      {
+        path:'/account',
+        element:<AccountPage></AccountPage>
       }
     ]
   },

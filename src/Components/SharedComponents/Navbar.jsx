@@ -4,6 +4,8 @@ import { IoMdMenu } from "react-icons/io";
 import { FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
+import { RxAvatar } from "react-icons/rx";
+
 
 export default function Navbar() {
   const location = useLocation();
@@ -16,6 +18,7 @@ export default function Navbar() {
     { path: "/ourclients", label: "Our Clients" },
     { path: "/aboutus", label: "About Us" },
     { path: "/contact", label: "Contact" },
+    { path:'/account', label: <RxAvatar className="text-2xl" /> }
   ];
 
   const linkClasses = (path) =>
@@ -43,10 +46,13 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex items-center gap-4 text-2xl">
-            <FiFacebook />
-            <FiInstagram />
-            <FiLinkedin />
-            <AiOutlineYoutube />
+            <a href="https://www.facebook.com/dpmsign/" target="_blank"><FiFacebook /></a>
+            <a href="https://www.instagram.com/dpmsign/" target="_blank"> <FiInstagram /></a>
+            <a href="https://www.linkedin.com/company/dpmsign/" target="_blank"><FiLinkedin /></a>
+            <a href="https://www.youtube.com/@dpmsign/" target="_blank"><AiOutlineYoutube /></a>
+           
+            
+            
           </div>
         </div>
       </div>
