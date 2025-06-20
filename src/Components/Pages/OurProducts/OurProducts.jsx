@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroBanner from '../../SharedComponents/HeroBanner'
+import ProductsPage from './ProductsPage'
 
 export default function OurProducts() {
   return (
@@ -14,7 +15,7 @@ export default function OurProducts() {
       buttonLink="/ourproducts"
     />
     
-          contsct
+         <ProductsPage></ProductsPage>
         </div>
   )
 }

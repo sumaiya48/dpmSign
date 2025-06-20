@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { BadgeCheck, Truck, RefreshCcw } from "lucide-react";
+import CustomersReview from "./CustomersReview";
+import { useCart } from "../Context/CartContext";
 
 export default function ProductDetails() {
+  const { addToCart } = useCart();
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
@@ -39,22 +42,35 @@ export default function ProductDetails() {
 
         {/* Attributes */}
         {product?.product?.attributes?.length > 0 && (
-          <div className="mt-6 space-y-3 bg-white p-5 rounded-xl shadow">
-            <h2 className="text-xl font-semibold text-gray-800 border-b pb-2">
-              Product Specifications
-            </h2>
-            <ul className="space-y-2">
-              {product.product.attributes.map((attr) => (
-                <li key={attr.attributeId}>
-                  <span className="font-medium text-gray-700">
-                    {attr.property}:
-                  </span>{" "}
-                  <span className="text-gray-600">{attr.description}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+  <div className="mt-6 bg-white p-5 rounded-xl shadow">
+    <h2 className="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">
+      Key Attributes
+    </h2>
+    <div className="overflow-x-auto">
+      <table className="w-full text-left text-sm border border-gray-200">
+        <thead className="bg-[#45B6E7] text-white">
+          <tr>
+            <th className="p-2 border border-gray-200">Property</th>
+            <th className="p-2 border border-gray-200">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {product.product.attributes.map((attr) => (
+            <tr key={attr.attributeId} className="odd:bg-white even:bg-gray-50">
+              <td className="p-2 border border-gray-200 font-medium text-gray-800">
+                {attr.property}
+              </td>
+              <td className="p-2 border border-gray-200 text-gray-700">
+                {attr.description}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+)}
+
       </div>
 
       {/* Right Side: Details */}
@@ -122,11 +138,12 @@ export default function ProductDetails() {
           <button className="bg-[#0094C6] hover:bg-[#0077a4] text-white px-6 py-2 rounded shadow w-full sm:w-auto">
             Send Order Request
           </button>
-          <button className="bg-gray-800 hover:bg-black text-white px-6 py-2 rounded shadow w-full sm:w-auto">
+          <button onClick={() => addToCart(product.product)} className="bg-gray-800 hover:bg-black text-white px-6 py-2 rounded shadow w-full sm:w-auto">
             Add to Cart
           </button>
         </div>
       </div>
+      <CustomersReview></CustomersReview>
     </div>
   );
 }
