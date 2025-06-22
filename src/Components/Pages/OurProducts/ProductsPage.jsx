@@ -8,7 +8,7 @@ export default function ProductsPage() {
 
     const navigate = useNavigate();
     
-const { addToCart } = useCart();
+const { dispatch } = useCart();
 
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
@@ -184,12 +184,14 @@ const { addToCart } = useCart();
                       }} className="flex-1 btn btn-info text-white py-3 rounded hover:bg-blue-700 text-sm">
                     View Details
                   </button>
-                  <button
-  onClick={() => addToCart(product)}
-  className="flex-1 bg-gray-200 text-gray-700 py-2 px-[2px] rounded hover:bg-gray-300 text-sm"
+      
+<button
+  onClick={() => dispatch({ type: "ADD_TO_CART", payload: product })}
+  className="btn bg-gray-200"
 >
   Add to Cart
 </button>
+
                 </div>
               </div>
             ))}

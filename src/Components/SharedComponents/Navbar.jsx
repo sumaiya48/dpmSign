@@ -15,7 +15,9 @@ import { useCart } from "../Context/CartContext";
 
 
 export default function Navbar() {
-  const { cart } = useCart();
+  
+const { cartItems } = useCart();
+const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
   const location = useLocation();
   const currentPath = location.pathname;
   const navigate = useNavigate();
@@ -110,11 +112,12 @@ export default function Navbar() {
               </button>
             </li>
             <li>
-              <button onClick={() => setShowCart(true)} className="relative btn btn-ghost text-lg">
+      
+<button onClick={() => setShowCart(true)} className="relative btn btn-ghost text-lg">
   <BsCart />
-  {cart.length > 0 && (
-    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-      {cart.length}
+  {cartCount > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+      {cartCount}
     </span>
   )}
 </button>

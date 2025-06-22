@@ -37,6 +37,7 @@ import Terms from "../Pages/Policy/Terms";
 import AccordionItem from "../Pages/Policy/AccordionItem";
 import ProductDetails from "../SharedComponents/ProductDetails.jsx";
 import AccountPage from "../Pages/AccountPage/AccountPage.jsx";
+import PartnerWithUs from "../SharedComponents/PartnerWithUs/PartnerWithUs.jsx";
 
 // Admin Panel Pages
 
@@ -97,7 +98,11 @@ const router = createBrowserRouter([
       {
         path:'/faq',
         element:<AccordionItem></AccordionItem>
-      }
+      },
+      {
+        path:'/partnerwithus',
+        element:<PartnerWithUs></PartnerWithUs>
+      },
     ]
   },
   {

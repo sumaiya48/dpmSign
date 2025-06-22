@@ -32,7 +32,7 @@ export default function Footer() {
                 <div>
                     <h3 className="font-bold mb-3">Company</h3>
                     <ul className="space-y-2 text-sm">
-                        <li>Partner With Us</li>
+                      <Link to='/partnerwithus'>  <li>Partner With Us</li></Link>
                         <li>Careers</li>
                         <li>Blogs</li>
                     </ul>
